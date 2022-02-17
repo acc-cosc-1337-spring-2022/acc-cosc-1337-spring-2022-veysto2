@@ -18,3 +18,4 @@ TEST_CASE("Verify multiply_numbers funcyion")
 	REQUIRE(multiply_numbers(2) == 10);
 
 
+
