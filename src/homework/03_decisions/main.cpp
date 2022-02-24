@@ -23,7 +23,7 @@ The GPA should calculate to 3.0, make sure to display it before program exits.
 Display:
 GPA 3.0
 
-*/
+
 int main() 
 {
 	string letter_grade;
@@ -55,4 +55,24 @@ int main()
 	cout << "GPA: " << gpa;
 
 	return 0;
+}*/
+
+int main()
+{
+    int input_grade;
+    cout<<"Enter the numeral grade between 0 to 100: ";
+    cin>>input_grade;
+    cout<<"\n";
+    if(input_grade<=100 && input_grade>=0)
+    {
+        cout<<"Alphabetical grade for "<<input_grade<<" by using if_else is: "<<get_letter_grade_using_if(input_grade)<<"\n";
+        cout<<"Alphabetical grade for "<<input_grade<<" by using switch is: "<<get_letter_grade_using_switch(input_grade)<<"\n";
+    }
+    else
+    {
+        cout<<"The grade number you gave is out of range.\n";
+    }
+    return 0;
 }
+
+
