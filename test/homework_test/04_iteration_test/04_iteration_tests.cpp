@@ -21,3 +21,4 @@ TEST_CASE("Verify gcd function")
 	REQUIRE(gcd(25,100) == 25);
 }
 
+

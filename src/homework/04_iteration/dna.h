@@ -47,3 +47,4 @@ void input_factorial();
 void input_gcd();
 
 
+
