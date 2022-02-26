@@ -20,3 +20,4 @@ TEST_CASE("Verify gcd function")
 	REQUIRE(gcd(21,28) == 7);
 	REQUIRE(gcd(25,100) == 25);
 }
+

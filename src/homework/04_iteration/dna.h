@@ -46,3 +46,4 @@ void input_factorial();
 // input greatest common divisor prototype
 void input_gcd();
 
+
