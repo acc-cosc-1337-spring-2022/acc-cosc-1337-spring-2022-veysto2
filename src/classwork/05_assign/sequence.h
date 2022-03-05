@@ -20,11 +20,11 @@ using std::cout; using std::cin; using std::string;
 
 //prototypes
 
-double get_gc_content();
+double get_gc_content(const string &dna);
 
-string get_reverse_string();
+string get_reverse_string(string dna);
 
-string get_dna_complement();
+string get_dna_complement(string dna);
 
 void promt_user();
 
@@ -34,5 +34,8 @@ void handle_menu_option(int option);
 
 void run_menu();
 
+void content_choice();
+
+void complement_choice();
 
 

@@ -125,23 +125,14 @@ void run_menu()
 }
 
 void handle_menu_option(int option)
-{   string dna;
-    double content = get_gc_content(dna);
-    string complement = get_dna_complement(dna);
-    
+{      
     switch(option)
     {
     case 1:
-        cout << "Enter a DNA String: ";
-        cin >> dna;
-        get_gc_content(dna);
-        cout << "GC content: " << content;       
+        content_choice();               
         break;
     case 2:
-        cout << "Enter a DNA String: ";
-        cin >> dna;
-        get_dna_complement(dna);        
-        cout << "Complement: " << complement;
+        complement_choice();
         break;
     case 3:
         promt_user();
@@ -149,4 +140,24 @@ void handle_menu_option(int option)
     default:
         cout<<"Invalid option\n";
     }
+}
+
+void content_choice()
+{
+    string dna;
+    double content;
+    cout << "Enter a DNA String: ";
+    cin >> dna;
+    content = get_gc_content(dna);
+    cout << "GC content: " << content<<"\n";
+}
+
+void complement_choice()
+{
+    string dna;
+    string complement;
+    cout << "Enter a DNA String: ";
+    cin >> dna;
+    complement = get_dna_complement(dna);        
+    cout << "Complement: " << complement<<"\n";
 }
