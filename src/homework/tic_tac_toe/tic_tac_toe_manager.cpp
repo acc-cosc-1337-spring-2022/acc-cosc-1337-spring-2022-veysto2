@@ -5,19 +5,19 @@ using std::cout, std::string, std::cin, std::vector, std::ostream, std::istream;
 
 std::ostream& operator<<(std::ostream& out, const TicTacToeManager& manager)
 {
-    for (auto i = manager.games.begin(); i != manager.games.end(); ++i )
+    for(auto& game:manager.games)
     {
-        out << *i << "\n"; 
+        out << *game << "\n"; 
     }
 
     return out; 
 }
 
 
-void TicTacToeManager::save_game(TicTacToe b) 
+void TicTacToeManager::save_game(unique_ptr<TicTacToe> &b) 
 {
-    games.push_back(b);
-    update_winner_count(b.get_winner());
+    games.push_back(move(b));
+    update_winner_count(b->get_winner());
 }
 
 void TicTacToeManager::get_winner_total(int& o, int& x, int& t)
